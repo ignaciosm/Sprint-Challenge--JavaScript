@@ -79,12 +79,12 @@ const graduates = [
 
 // Once you have the new array created, sort the universities alphabetically and log the result.
 
-const universities = [];
-graduates.forEach(function(graduate){
-  universities.push(graduate.university);
-  universities.sort();
-});
-console.log(universities);
+// const universities = [];
+// graduates.forEach(function(graduate){
+//   universities.push(graduate.university);
+//   universities.sort();
+// });
+// console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -92,22 +92,22 @@ The resulting contact information strings should have a space between the first 
 "Josh josh@example.com"
 
 Log the result of your new array. */
-const contactInfo = [];
-graduates.forEach(function(graduate){
-  contactInfo.push(`${graduate.first_name} ${graduate.email}`);
-  contactInfo.sort();
-});
+// const contactInfo = [];
+// graduates.forEach(function(graduate){
+//   contactInfo.push(`${graduate.first_name} ${graduate.email}`);
+//   contactInfo.sort();
+// });
 
-console.log(contactInfo);
+// console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 
-let unisWithUni = [];
-unisWithUni = graduates.filter(function(graduate){
-  return graduate.university.includes('Uni');
-});
+// let unisWithUni = [];
+// unisWithUni = graduates.filter(function(graduate){
+//   return graduate.university.includes('Uni');
+// });
 
-console.log(unisWithUni);
+// console.log(unisWithUni);
 
 
 // ==== ADVANCED Array Methods ====
@@ -179,3 +179,24 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
+const universities = [];
+graduates.forEach((graduate) => {
+  universities.push(graduate.university);
+  universities.sort();
+});
+console.log(universities);
+
+const contactInfo = [];
+graduates.forEach((graduate)=>{
+  contactInfo.push(`${graduate.first_name} ${graduate.email}`);
+  contactInfo.sort();
+});
+
+console.log(contactInfo);
+
+let unisWithUni = [];
+unisWithUni = graduates.filter((graduate)=>{
+  return graduate.university.includes('Uni');
+});
+
+console.log(unisWithUni);
